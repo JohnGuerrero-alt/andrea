@@ -1,0 +1,48 @@
+.screen {
+    margin: 20px 10%;
+    border-radius: 13px;
+    background:linear-gradient(135deg, #184e68 0%,#57ca85 100%);
+    height: calc(100vh - 40px);
+    width: calc(100vw - 20%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.imagen {
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+
+}
+
+h1 {
+    color: #fefefe;
+    text-align: center;
+}
+
+.button {
+    background-color: #118AB2;
+    color: #fefefe;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgb(49, 49, 49);
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #FFD166;
+    color: rgb(43, 43, 43);
+
+}
+
