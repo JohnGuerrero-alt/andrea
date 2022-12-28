@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import Swal from 'sweetalert2';
+import {  NavigationEnd, Router, Event } from '@angular/router';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -9,45 +10,64 @@ import Swal from 'sweetalert2';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  currentRoute: any;
+  logo = {
+    perfil : "none",
+    mensaje : "none",
+    sorpresa : "none"
+  }
+
+  constructor(
+    private router:Router
+  ) { 
+      const tiporuta = "";
+     this.router.events.subscribe((event: Event) => {
+      if(event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+        console.log(event);
+      }  
+        if(this.currentRoute == "/description"){
+          this.colLogo('perfil')
+        }
+        if(this.currentRoute == "/message" ){
+          this.colLogo('mensaje')
+        }
+        if(this.currentRoute == "/surprise" ) {
+          this.colLogo('sorpresa')
+        }
+     })
+
+  }
 
   ngOnInit(): void {
+
   }
 
-  mostrarMensaje() {
-    Swal.fire({
-      allowEscapeKey: false,
-      allowEnterKey: false,
-      allowOutsideClick: false,
-      html: `
-      
-        <div class="main">
-          <div class="fotoPerfil"></div>
-          <div class="descripcion font">
-            Andrea, se que este mes no es el de tu agrado. Espero en serio de corazón que todo mejore. En el 2023 se cumplan las cosas que tienes en mente, que tu salud que es lo 
-            más importante mejore considerablemente y que en serio vivas en paz.
+  colLogo(tipo:any){
+    if(tipo == "perfil") {
+      this.logo = {
+        perfil: "#fefefe",
+        mensaje : "none",
+        sorpresa : "none"
+      }
+    }
+    if(tipo == "mensaje") {
+      this.logo = {
+        perfil: "none",
+        mensaje : "#fefefe",
+        sorpresa : "none"
+      }  
+    }
+    if(tipo == "sorpresa")  {
+      this.logo = {
+        perfil: "none",
+        mensaje : "none",
+        sorpresa : "#fefefe"
+      }  
+    }
 
-            <br><br>
-
-            Lo que te digo que las cualidades de pendiente, entregada, amorosa, son cosas muy importantes y valoradas; no se como fue tus experiencias, pero puedo decir que no aprovecharon cosas que tuviste y que en serio viendote te hacen una gran mujer.
-
-            <br><br>
-
-            Que todo mejore y en serio puede que sientas muchas debilidades o pocas cualidades o lo que has hecho no ha servido, pero yo te veo como una gran mujer que tienes valores altos. 
-
-            <br><br>
-            Psdata: tu sonrisa es muy hermosa, en serio que me gusta.
-
-
-
-
-
-          </div>
-
-        </div>
-      
-      `
-    })
   }
+
+  
 
 }

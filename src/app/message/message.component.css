@@ -1,0 +1,17 @@
+.message {
+    height: 100%;
+    width: 100%;
+    
+}
+
+.mensaje {  
+    padding: 10px 5% 10px 5%;
+    text-align: justify;
+    overflow-y: auto;
+    font-size: 18px;
+    height: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

@@ -1,0 +1,76 @@
+
+.descrip {
+    height: 100%;
+    
+}
+
+.profile {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(244,244,247,1) 0%, rgba(46,195,226,1) 68%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 1fr;
+}
+
+.profile p {
+    font-size: 13px;
+    color: #000;
+    font-weight: bold;
+    height: 7px;
+    
+}
+
+.profilePhoto {
+    width: 70px;
+    height: 70px;
+    background-image: url('../../assets/sexy.png');
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-end;
+    margin: 0 20px 0 0;
+    height: 100%;
+}
+
+.informacion svg:hover {
+    cursor: pointer;
+}
+
+.cualidades {
+    
+    font-size: 20px;
+    background-color: #fefefe;
+    margin: 10px 10% 70px 10%;
+    overflow-y: auto;
+    height: calc(100vh - 160px  - 100px);
+    
+}
+
+.cualidades ul {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: center;
+    align-items: left;
+    list-style: none;
+
+}
+
+.cualidades ul li {
+    text-align: justify;
+    border: 1px solid rgb(176, 176, 176);
+    padding: 10px 10px;
+    border-radius: 13px;
+}

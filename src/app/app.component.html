@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<div class="screen font" *ngIf="!app">
+
+    
+
+    <figure>
+        <img src="https://img-15.stickers.cloud/packs/ecc000e5-24d7-4c29-b042-e8a7251137e6/webp/d2d89901-6b84-4b20-b972-7e7ffe8bd73d.webp" alt="" class="imagen">
+    </figure>
+
+    <h1>Feliz Navidad y próspero año Andrea !! </h1>
+
+
+    <div class="button " (click)="mostrarMensaje()" >Presioname</div>
+</div>
+
+<div class="appPrincipal" *ngIf="app">
+
+    <app-landing-page></app-landing-page>
+
+</div>
+<!-- <router-outlet></router-outlet> -->

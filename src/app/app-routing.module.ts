@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { DescripcionComponent } from './descripcion/descripcion.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MessageComponent } from './message/message.component';
+import { SurpriseComponent } from './surprise/surprise.component';
 
 const routes: Routes = [
-  {
-     path:'', component:LandingPageComponent
-  }
+  { path: "description", component:DescripcionComponent},
+  { path: "message" , component:MessageComponent},
+  { path: "surprise" , component: SurpriseComponent},
+  { path:"**" , component:AppComponent}
 
 ];
 

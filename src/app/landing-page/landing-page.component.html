@@ -1,13 +1,21 @@
-<div class="screen font">
+<div class="body">
+    <div class="display">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="navbar">
+        <ul class="list-social">
+            <li routerLink="/description"><div class="social social-profile">
+                <svg  (click)="colLogo('perfil')" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" [attr.fill]="this.logo.perfil" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
 
-    
-
-    <figure>
-        <img src="https://img-15.stickers.cloud/packs/ecc000e5-24d7-4c29-b042-e8a7251137e6/webp/d2d89901-6b84-4b20-b972-7e7ffe8bd73d.webp" alt="" class="imagen">
-    </figure>
-
-    <h1>Feliz Navidad y próspero año Andrea !! </h1>
-
-
-    <div class="button " (click)="mostrarMensaje()" >Presioname</div>
+            </div></li>
+            <li routerLink="/message"><div class="social social-message">
+                <svg (click)="colLogo('mensaje')" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"  [attr.fill]="logo.mensaje" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div></li>
+            <li routerLink="/surprise"><div class="social social-surprise">
+                <svg   (click)="colLogo('sorpresa')"  xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" [attr.fill]="logo.sorpresa" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gift"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+            </div></li>
+        </ul>
+    </div>
 </div>
+
+
